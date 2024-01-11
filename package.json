@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm uninstall nodemon && npm install express mysql2 dotenv cors morgan typescript && npm i @types/express && npm i @types/morgan && npm i @types/cors &&  nodemon index.js",
+    "start": "npm uninstall nodemon && npm install express mysql2 dotenv cors morgan typescript && npm i @types/express && npm i @types/morgan && npm i @types/cors",
     "build": "npm install nodemon express mysql2 dotenv cors morgan typescript && npm i @types/express && npm i @types/morgan && npm i @types/cors"
   },
   "keywords": [],
