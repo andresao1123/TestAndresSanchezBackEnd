@@ -1,0 +1,11 @@
+{
+    "host": "localhost",
+    "user": "root",
+    "database": "pagoplux",
+    "password": "Pipesao199909",
+    "secretKey":"UGFnb1BsdXhBZG1pblByZTIwMjAlXzpQYWdvUGx1eEFwaV9QcmUwNF8yMDIw",
+    "baseURLTrans":"https://apipre.pagoplux.com/transv1",
+    "baseUrlInt":"https://apipre.pagoplux.com/intv1",
+    "username":"o3NXHGmfujN3Tyzp1cyCDu3xst",
+    "passwordApi":"TkBhZQP3zwMyx3JwC5HeFqzXM4p0jzsXp0hTbWRnI4riUtJT"
+}
