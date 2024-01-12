@@ -12,9 +12,9 @@ const ports = process.env.PORT || 3000;
 app.use(bodyParser.json());
 
 // Enable CORS for all routes
-app.use(cors());
+// app.use(cors());
 
-app.options('*', cors());
+// app.options('*', cors());
 
 app.use('/auth', authRoutes);
 app.use('/api', apiRoutes);
