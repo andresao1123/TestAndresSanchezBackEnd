@@ -10,15 +10,12 @@ const app = express();
 const ports = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
-app.use(cors());
-
-app.options('*', (req, res) => {
-    res.header('Access-Control-Allow-Headers', 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range');
-    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.header('Access-Control-Allow-Origin', '*');
-    res.header('Access-Control-Expose-Headers', 'Content-Length,Content-Range');
-    res.sendStatus(200);
-  });
+app.use(cors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    allowedHeaders: 'Content-Type,Authorization',
+    exposedHeaders: 'Content-Length,Content-Range',
+}));
 
 app.use('/auth', authRoutes);
 app.use('/api', apiRoutes);
