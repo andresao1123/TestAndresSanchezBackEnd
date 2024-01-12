@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors'); // Import the cors module
+const cors = require('cors');
 
 const authRoutes = require('./routes/auth');
 const apiRoutes = require('./routes/api');
@@ -10,11 +10,11 @@ const app = express();
 const ports = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use(cors());
 
-// Enable CORS for all routes
-// app.use(cors());
-
-// app.options('*', cors());
+app.options('*', (req, res) => {
+    res.sendStatus(200);
+});
 
 app.use('/auth', authRoutes);
 app.use('/api', apiRoutes);
