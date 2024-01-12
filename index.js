@@ -2,6 +2,8 @@ const express = require('express');
 
 const bodyParser = require('body-parser');
 
+const cors = require('cors');
+
 const authRoutes = require('./routes/auth');
 
 const apiRoutes = require('./routes/api')
@@ -24,6 +26,8 @@ app.use((req,res,next) => {
 app.use('/auth',authRoutes);
 
 app.use('/api',apiRoutes);
+
+app.use(cors());
 
 app.use(errorController.get404);
 app.use(errorController.get500);
