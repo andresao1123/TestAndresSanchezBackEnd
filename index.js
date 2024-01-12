@@ -27,9 +27,19 @@ app.use('/auth',authRoutes);
 
 app.use('/api',apiRoutes);
 
-app.use(cors());
+const corsOptions = {
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: false, // Enable credentials (e.g., cookies, authorization headers)
+    optionsSuccessStatus: 204, // Respond with a 204 status for preflight requests
+  };
 
-app.options('*', cors());
+app.use(cors(corsOptions));
+
+app.options('*', (req, res) => {
+    res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
+    res.sendStatus(204);
+  });
 
 app.use(errorController.get404);
 app.use(errorController.get500);
