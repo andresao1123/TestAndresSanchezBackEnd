@@ -10,7 +10,7 @@ module.exports = class User{
 
     static find(name){
         return db.execute(
-            'SELECT * FROM users WHERE name = ?',[name]
+            'SELECT * FROM users WHERE BINARY name = ?',[name]
         )
     }
 
