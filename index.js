@@ -11,7 +11,7 @@ const ports = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: 'http://localhost:4200',  // Replace with your frontend application's origin
+    origin:  ['http://localhost:4200', 'https://testandressanchezpagoplux.netlify.app'],  // Add your frontend application's origins,  // Replace with your frontend application's origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,  // Allow credentials (cookies, authorization headers)
   }));
