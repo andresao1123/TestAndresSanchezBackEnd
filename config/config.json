@@ -1,8 +1,9 @@
 {
-    "host": "localhost",
-    "user": "root",
+    "host": "mysql-andressanchez-andresaoperez-7704.a.aivencloud.com",
+    "user": "avnadmin",
+    "port":16987,
     "database": "pagoplux",
-    "password": "Pipesao199909",
+    "password": "AVNS_ALAnqeM25Z4eJKL4QgW",
     "secretKey":"UGFnb1BsdXhBZG1pblByZTIwMjAlXzpQYWdvUGx1eEFwaV9QcmUwNF8yMDIw",
     "baseURLTrans":"https://apipre.pagoplux.com/transv1",
     "baseUrlInt":"https://apipre.pagoplux.com/intv1",
