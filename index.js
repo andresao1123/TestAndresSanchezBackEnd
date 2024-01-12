@@ -11,11 +11,10 @@ const ports = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(cors({
-    origin: '*',
+    origin: 'http://localhost:4200',  // Replace with your frontend application's origin
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    allowedHeaders: 'Content-Type,Authorization',
-    exposedHeaders: 'Content-Length,Content-Range',
-}));
+    credentials: true,  // Allow credentials (cookies, authorization headers)
+  }));
 
 app.use('/auth', authRoutes);
 app.use('/api', apiRoutes);
