@@ -29,6 +29,8 @@ app.use('/api',apiRoutes);
 
 app.use(cors());
 
+app.options('*', cors());
+
 app.use(errorController.get404);
 app.use(errorController.get500);
 
